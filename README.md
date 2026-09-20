@@ -18,4 +18,8 @@ See [scope and exclusions](docs/SCOPE.md) and
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Proposed future default: **MPL-2.0**, with the full text in [LICENSE](LICENSE).
+This review-branch proposal has not been adopted on the default branch. The
+public MIT baseline and prior recipient rights remain documented in
+[LICENSE-POLICY.md](LICENSE-POLICY.md) and [LICENSE-MIT](LICENSE-MIT).
+Adoption requires the pending ownership and counsel review.
