@@ -4,11 +4,42 @@
 
 [Run](#run-an-experiment) · [Contract](docs/CONTRACT.md) · [Research profile](#research-profile) · [Scope](docs/SCOPE.md)
 
-## Notation Systems
+## Organization
+
+**Notation Systems Inc** is a scientific computing and systems engineering company developing computational instruments, software, and interactive environments for understanding and building physical and virtual systems.
+
+Its development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation, and execution, from materials and machines to interactive worlds.
+
+As the parent organization, it operates through three divisions:
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games, graphics, world building, interactive environments, and gameplay simulation |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication, and production systems |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials, and simulation |
+
+**Repository role:** **Notations Laboratories**. Polygon Dynamics follows bounded rational straight-line flow on connected square-tiled translation surfaces while retaining crossings and stopping conditions. It supplies a geometric dynamics reference for scientific computing and virtual-system experiments. Arbitrary polygon gluing, vertex continuation, and physical application validity remain outside the current implemented contract.
+
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack map](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/STACK.md) · [Component role](docs/STACK_ROLE.md) · [Request and result contract](docs/CONTRACT.md)
+
+**Status: implemented bounded reference.** This Python provider follows declared
+straight-line flow across connected square-tiled translation surfaces. Right and
+up tile permutations specify the gluings; left and down use their inverses. The
+included three-square L-shaped surface has genus two, so this operation supports
+more than the flat torus.
+
+Each segment and boundary-intersection time is derived by rational arithmetic
+from the declared affine motion. Results retain the exact request, gluing
+validation, genus and vertex classes, directed crossing events, segments,
+recomputed invariants, stopping policies and canonical SHA-256 digests. This
+bounded mathematical computation does not establish ergodicity, physical
+accuracy, or cryptographic proof of execution.
+
+## Instrument role
 
 **Frontier Tooling and Instrumentation for Digital Futures.** We develop computational instruments and operational tooling connecting scientific methods, specialist computation and human expertise.
 
-[Notations Systems Terminal](https://github.com/giasonpooni/Notations-Systems-Terminal) coordinates supported investigations; this provider owns topology validation and trajectory computation. Cartesian Graphics develops interactive worlds, simulation technology and digital IP, without turning this mathematical reference into a general game-navigation solver. [Organization profile](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/PUBLIC_POSITIONING.md).
+[Notations Systems Terminal](https://github.com/atomtrapping/Notations-Systems-Terminal) coordinates supported investigations; this provider owns topology validation and trajectory computation. Notations Gaming develops interactive worlds, simulation technology and digital IP, without turning this mathematical reference into a general game-navigation solver. [Current organization](#organization).
 
 | Identity | Scope |
 | --- | --- |
@@ -51,6 +82,8 @@ print(result["final_state"], result["artifact_digest"])
 
 The example completes at time `3`, tile `1`, position `["1/4", "5/6"]`, after four gluing events. [Torus-cover fixture](examples/torus-cover.json) provides a genus-one analytical comparison with different tile transitions.
 
+**Status: implemented bounded reference.**
+
 ## Completion and bounds
 
 | Status | Meaning |
@@ -85,7 +118,7 @@ General polygon gluings, arbitrary real directions, vertex continuation, Jacobi 
 
 Use analytical unfolding, inverse flow, near-corner cases and bounded prefixes as specimens. Separate exact rational statements from floating-point displays and partial results from completed trajectories. Shared graphical vocabulary with games or GIS is not evidence of shared physical semantics.
 
-[Research protocol](https://github.com/giasonpooni/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). New language/CUDA providers, representation-minimality claims and performance improvements require explicit implementation and tests. This documentation adds no runtime, telemetry or authority.
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). New language/CUDA providers, representation-minimality claims and performance improvements require explicit implementation and tests. This documentation adds no runtime, telemetry or authority.
 
 ## License and compatibility
 
