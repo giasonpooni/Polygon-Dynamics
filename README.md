@@ -22,7 +22,17 @@ operation specifications, execution attempts and verification records remain
 distinct. Repository URLs, imports, schemas, digests and licence terms are
 unchanged by this documentation update.
 
-Part of **Notation Systems' computational instrumentation and evidence infrastructure**.
+## Organization
+
+**Notation Systems Inc** is the parent organization. Its operating divisions are:
+
+| Division | Focus |
+| --- | --- |
+| **Notations Gaming** | Games and interactive worlds |
+| **Notations Manufacturing** | Industrial design, materials, and manufacturing systems |
+| **Notations Laboratories** | Research, scientific computing, simulation, and experimental validation |
+
+**Repository role:** **Notations Laboratories** supports scientific computing and geometric dynamics research.
 
 [Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack map](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/STACK.md) · [Component role](docs/STACK_ROLE.md) · [Request and result contract](docs/CONTRACT.md)
 
