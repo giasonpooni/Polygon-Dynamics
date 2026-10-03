@@ -1,26 +1,8 @@
 # Polygon Dynamics
 
-**Follow trajectories across connected polygonal spaces while retaining crossings, topology and stopping conditions.**
+**Follow rational trajectories across connected square-tiled surfaces, retaining crossings, topology and stopping conditions.**
 
-| NET micro-tool | Identity and scope |
-| --- | --- |
-| User-facing name | **Polygon Dynamics** |
-| Proposed NET operation | `geometry.polygon_dynamics` |
-| Implementation repository | `Translation-Surface-Dynamics-Explorer` |
-| Existing import and CLI module | `translation_surface_dynamics` |
-| Current boundary | Bounded rational straight-line flow on connected square-tiled translation surfaces |
-
-`geometry.polygon_dynamics` is the agreed NET-facing target, not a newly
-registered command. The current provider supports square-tile permutation
-gluings, **not arbitrary polygon gluings or vertex continuation**. Use its
-existing CLI and Python API below. The broader tool label does not widen the
-implemented request contract.
-
-NET owns installation, revision binding, session composition and dispatch;
-this provider owns topology validation and trajectory computation. Evidence,
-operation specifications, execution attempts and verification records remain
-distinct. Repository URLs, imports, schemas, digests and licence terms are
-unchanged by this documentation update.
+[Run](#run-an-experiment) · [Contract](docs/CONTRACT.md) · [Research profile](#research-profile) · [Scope](docs/SCOPE.md)
 
 ## Organization
 
@@ -53,22 +35,39 @@ recomputed invariants, stopping policies and canonical SHA-256 digests. This
 bounded mathematical computation does not establish ergodicity, physical
 accuracy, or cryptographic proof of execution.
 
+## Instrument role
+
+**Frontier Tooling and Instrumentation for Digital Futures.** We develop computational instruments and operational tooling connecting scientific methods, specialist computation and human expertise.
+
+[Notations Systems Terminal](https://github.com/atomtrapping/Notations-Systems-Terminal) coordinates supported investigations; this provider owns topology validation and trajectory computation. Notations Gaming develops interactive worlds, simulation technology and digital IP, without turning this mathematical reference into a general game-navigation solver. [Current organization](#organization).
+
+| Identity | Scope |
+| --- | --- |
+| Current repository | `Polygon-Trajectory-Experiments` |
+| Import / CLI module | `translation_surface_dynamics` |
+| Proposed NET target | `geometry.polygon_dynamics` |
+| Implemented profile | Bounded rational straight-line flow on connected square-tiled translation surfaces |
+
+The friendly operation is not a newly registered command. Right/up tile permutations define gluings; left/down use inverses. Arbitrary polygon gluings and vertex continuation are unsupported. The included three-square L-shaped surface has genus two, so the reference is not limited to the flat torus.
+
+Segments and boundary times use rational arithmetic. Results retain request, gluing validation, genus/vertex classes, directed crossings, segments, invariants, stop policy and SHA-256 digests. This does not establish ergodicity, physical accuracy or cryptographic proof of execution.
+
 ## Run an experiment
 
-Requires Python 3.11 or newer; there are no runtime dependencies.
+Python 3.11+; no runtime dependencies:
 
 ```sh
 python -m pip install .
 python -m translation_surface_dynamics < examples/request.json
 ```
 
-The second command uses POSIX shell redirection. In PowerShell:
+PowerShell:
 
 ```powershell
 Get-Content -Raw examples/request.json | python -m translation_surface_dynamics
 ```
 
-The installed API:
+Installed API:
 
 ```python
 import json
@@ -81,27 +80,21 @@ print(result["status"], result["gluing_validation"]["genus"])
 print(result["final_state"], result["artifact_digest"])
 ```
 
-The example finishes at time `3`, in tile `1` at `["1/4", "5/6"]`, after four
-gluing events. [The torus-cover fixture](examples/torus-cover.json) supplies a
-genus-one analytical comparison with different tile transitions.
+The example completes at time `3`, tile `1`, position `["1/4", "5/6"]`, after four gluing events. [Torus-cover fixture](examples/torus-cover.json) provides a genus-one analytical comparison with different tile transitions.
+
+**Status: implemented bounded reference.**
 
 ## Completion and bounds
 
 | Status | Meaning |
 | --- | --- |
-| `completed` | Requested duration covered, including a single edge gluing at the endpoint. |
-| `stopped_at_vertex` | Two edges reached simultaneously; no continuation through the vertex chosen. |
-| `event_budget_exhausted` | Next boundary reached, but its gluing not applied. |
+| `completed` | Requested duration covered, including a single endpoint edge gluing |
+| `stopped_at_vertex` | Two edges reached together; no continuation chosen |
+| `event_budget_exhausted` | Next boundary reached but gluing not applied |
 
-Partial results retain a valid prefix and explicit pending edges. A corner or
-budget stop at the requested endpoint is still partial even when `remaining` is
-`"0"`. Regular and singular vertices both stop. Starts must be strictly interior.
+Partial results retain a valid prefix and pending edges. Vertex/budget stops remain partial even with `remaining = "0"`. Regular and singular vertices both stop; starts must be strictly interior.
 
-The profile accepts 1–32 tiles, 0–1,024 edge events, canonical reduced rational
-strings with 64-bit numerators and denominators, and duration and direction
-component magnitudes at most 1,024. Arithmetic growth beyond 256 bits fails
-without an artifact. The CLI accepts at most 32 KiB and rejects duplicate keys,
-nonfinite values and unsupported fields. See the [full contract](docs/CONTRACT.md).
+Limits: 1–32 tiles; 0–1,024 edge events; reduced rational strings with 64-bit numerators/denominators; duration and direction magnitudes at most 1,024. Arithmetic beyond 256 bits fails without an artifact. The CLI accepts at most 32 KiB and rejects duplicate keys, nonfinite values and unsupported fields. [Full contract](docs/CONTRACT.md).
 
 ## Verify the implementation
 
@@ -111,31 +104,22 @@ python -m pip install "setuptools>=77" wheel
 python scripts/check_installed.py
 ```
 
-Tests exercise analytical torus unfolding, genus two, inverse flow, noninvolutive
-gluings, rational near-corner ordering, explicit stops, malformed input and digest
-recomputation. The installed-wheel check runs the same algorithm from a separate
-virtual environment outside the source tree. CI runs source and installed-wheel
-checks on Windows and Linux.
+Tests cover torus unfolding, genus two, inverse flow, noninvolutive gluings, near-corner ordering, stops, malformed input and digest recomputation. The installed-wheel check uses a separate environment outside the checkout. Existing CI targets Windows/Linux; this documentation does not rerun or newly qualify it.
 
 ## Component boundary
 
-```mermaid
-flowchart LR
-  I["Declared gluing and rational motion"] --> V["Input and topology validation"]
-  V --> F["Bounded exact affine flow"]
-  F --> R["Segments, events, invariants and status"]
-  R --> D["Canonical retained artifact"]
-  D -. "explicit versioned adapter" .-> W["CIW investigation"]
-```
+Declared gluing and motion pass through input/topology validation, bounded affine flow and retained artifacts. NET owns revision binding, investigation retention and presentation through its separately versioned adapter. Provider availability does not establish installation in a deployed workbench.
 
-The solid path is implemented here. Notations Engineering Terminal (CIW) owns
-installation, revision binding, investigation retention and presentation through
-its separately versioned adapter. A current provider checkout does not imply
-that a deployed workbench has installed it. General polygon gluings, arbitrary
-real directions, vertex continuation, Jacobi fields and moduli-space exploration
-remain outside this profile. See [scope](docs/SCOPE.md) and
-[contributor invariants](CONTRIBUTING.md).
+General polygon gluings, arbitrary real directions, vertex continuation, Jacobi fields and moduli-space exploration remain outside the profile. [Contributor invariants](CONTRIBUTING.md) · [Stack role](docs/STACK_ROLE.md).
 
-## License
+## Research profile
 
-MIT. See [LICENSE](LICENSE).
+**Question:** which trajectory and topological distinctions survive changes of representation, and when must an operation stop rather than invent continuation?
+
+Use analytical unfolding, inverse flow, near-corner cases and bounded prefixes as specimens. Separate exact rational statements from floating-point displays and partial results from completed trajectories. Shared graphical vocabulary with games or GIS is not evidence of shared physical semantics.
+
+[Historical research protocol](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/b41b84922d4963a9206202029afd1e78b9451f9c/RESEARCH_PROGRAMME.md). New language/CUDA providers, representation-minimality claims and performance improvements require explicit implementation and tests. This documentation adds no runtime, telemetry or authority.
+
+## License and compatibility
+
+[MIT](LICENSE). Existing imports, operation/schema IDs, digests, source pins and notices remain unchanged. No source, tests, dependency, licence, permissions or release state changes. Public-interest/private-IP positioning does not transfer rights or establish nonprofit status.
