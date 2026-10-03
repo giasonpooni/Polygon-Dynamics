@@ -2,7 +2,7 @@
 
 Notation Systems develops computational instrumentation and evidence infrastructure.
 This component owns **bounded trajectory dynamics on declared translation
-surfaces**. The [stack map](https://github.com/giasonpooni/Computational-Instrumentation-Workbench/blob/main/docs/STACK.md)
+surfaces**. The [stack map](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/STACK.md)
 locates the public components.
 
 ## Current boundary

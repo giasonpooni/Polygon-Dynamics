@@ -38,7 +38,7 @@ As the parent organization, it operates through three divisions:
 
 **Repository role:** **Notations Laboratories**. Polygon Dynamics follows bounded rational straight-line flow on connected square-tiled translation surfaces while retaining crossings and stopping conditions. It supplies a geometric dynamics reference for scientific computing and virtual-system experiments. Arbitrary polygon gluing, vertex continuation, and physical application validity remain outside the current implemented contract.
 
-[Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack map](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/STACK.md) · [Component role](docs/STACK_ROLE.md) · [Request and result contract](docs/CONTRACT.md)
+[Notations Engineering Terminal (CIW)](https://github.com/atomtrapping/Notations-Systems-Terminal) · [Stack map](https://github.com/atomtrapping/Notations-Systems-Terminal/blob/main/docs/STACK.md) · [Component role](docs/STACK_ROLE.md) · [Request and result contract](docs/CONTRACT.md)
 
 **Status: implemented bounded reference.** This Python provider follows declared
 straight-line flow across connected square-tiled translation surfaces. Right and
