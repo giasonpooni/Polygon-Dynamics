@@ -24,15 +24,19 @@ unchanged by this documentation update.
 
 ## Organization
 
-**Notation Systems Inc** is the parent organization. Its operating divisions are:
+**Notation Systems Inc** is a scientific computing and systems engineering company developing computational instruments, software, and interactive environments for understanding and building physical and virtual systems.
+
+Its development direction connects measurement, state estimation and sensor fusion, scientific modelling, simulation, and execution, from materials and machines to interactive worlds.
+
+As the parent organization, it operates through three divisions:
 
 | Division | Focus |
 | --- | --- |
-| **Notations Gaming** | Games and interactive worlds |
-| **Notations Manufacturing** | Industrial design, materials, and manufacturing systems |
-| **Notations Laboratories** | Research, scientific computing, simulation, and experimental validation |
+| **Notations Gaming** | Games, graphics, world building, interactive environments, and gameplay simulation |
+| **Notations Manufacturing** | Design, machinery integration, process development, fabrication, and production systems |
+| **Notations Laboratories** | Research and experimental validation in scientific computing, measurement, physics and chemistry modelling, materials, and simulation |
 
-**Repository role:** **Notations Laboratories** supports scientific computing and geometric dynamics research.
+**Repository role:** **Notations Laboratories**. Polygon Dynamics follows bounded rational straight-line flow on connected square-tiled translation surfaces while retaining crossings and stopping conditions. It supplies a geometric dynamics reference for scientific computing and virtual-system experiments. Arbitrary polygon gluing, vertex continuation, and physical application validity remain outside the current implemented contract.
 
 [Notations Engineering Terminal (CIW)](https://github.com/giasonpooni/Notations-Engineering-Terminal) · [Stack map](https://github.com/giasonpooni/Notations-Engineering-Terminal/blob/main/docs/STACK.md) · [Component role](docs/STACK_ROLE.md) · [Request and result contract](docs/CONTRACT.md)
 
